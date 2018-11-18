@@ -1,4 +1,5 @@
 
+
 public class Array {
 	private int[] data;
 	private int size;
@@ -46,4 +47,33 @@ public class Array {
 		data[index]=e;
 		size++;
 	}
+	//获取index索引位置
+	public int get(int index){
+		if(index<0 || index>=size){
+				throw new IllegalArgumentException("index<0 or index>=size！index范围有问题");
+		}
+		return data[index]; 
+	}
+	//修改index索引的元素e
+	public void set(int index,int e){
+		if(index<0 || index>=size){
+			throw new IllegalArgumentException("index<0 or index>=size！index范围有问题");
+		}
+		data[index]=e;
+	}
+	@Override
+	public String toString() {
+		StringBuilder res = new StringBuilder();
+		res.append(String.format("Array:size=%d,capacity=%d\n", size,data.length));
+		res.append('[');
+		for(int i=0;i<size;i++){
+			res.append(data[i]);
+			if(i!=size-1){
+				res.append(',');
+			}
+		}
+		res.append(']');
+		return res.toString();
+	}
+	
 }
