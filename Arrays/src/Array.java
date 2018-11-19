@@ -35,7 +35,8 @@ public class Array<E> {
 	}
 	// 在index索引的位置插入一个新元素e
 	public void add(int index,E e){
-		if(data.length==index){
+		if(data.length==size){
+			System.out.println("resize");
 			resize(data.length * 2);
 		}
 		if(index<0 || index>size){

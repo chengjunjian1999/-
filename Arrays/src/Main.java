@@ -1,12 +1,11 @@
 
 public class Main {
 	public static void main(String[] args) {
-		Array arr = new Array();
+		Array arr = new Array(1);
 		arr.addFirst(1);
-		arr.addFirst(2);
-		arr.add(0, 4);
 		System.out.println(arr);
-		arr.removeFirst();
+		arr.addFirst(2);
+		arr.addFirst(3);
 		System.out.println(arr);
 	
 	}
